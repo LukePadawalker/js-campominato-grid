@@ -31,9 +31,36 @@ section{
 }
 
 .grid{
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
+}
 
+.cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    background-color: rgb(187, 155, 217);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.cell.easy{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+
+}
+
+.cell.medium{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.cell.hard{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cell.clicked{
+    background-color: blueviolet;
 }
 
 
