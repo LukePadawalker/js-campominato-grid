@@ -36,6 +36,9 @@ button.addEventListener('click', function(){
     if (gridExist == false){
         for(let i = 0; i < totalCells; i++){
 
+            // variabili
+            const newCell = createCell();        
+
             // creiamo il contenitore per il numero
             cellContainer = document.createElement('h5');
 
@@ -50,21 +53,23 @@ button.addEventListener('click', function(){
             
 
             // inseriamo la cella dentro la griglia
-            const newCell = createCell();        
             grid.appendChild(newCell);
 
 
             newCell.addEventListener('click', () => {
-                newCell.classList.add("clicked");
-                console.log(cellContainer);
+                newCell.classList.toggle("clicked");
+                console.log(newCell.innerText);
             })
 
 
 
+
+
         }
+
+
         // facciamo si che il bottone play generi una sola griglia
         gridExist = true;
-
     }
 
 
