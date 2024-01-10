@@ -1,5 +1,4 @@
 Ciao ragazzi!
-
 Esercizio di oggi: Griglia Dinamica
 repo: js-campominato-grid
 
