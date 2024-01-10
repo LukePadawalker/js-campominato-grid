@@ -8,12 +8,16 @@ console.log("JS OK");
 // recupero gli elementi dall'html
 const grid = document.getElementById('grid');
 const button = document.getElementById('button');
+const selector = document.getElementById('selector');
 
 
 // valori iniziali
 const rows = 10;
 const cols = 10;
 const totalCells = rows * cols;
+let selectorValue = selector.value;
+console.log(selectorValue);
+
 
 
 // funzioni
@@ -21,17 +25,68 @@ const createCell = () => {
     const cell = document.createElement('div');
     cell.className = 'cell';
     cell.classList.add("d-flex", "justify-content-center", "align-items-center");
-
+    
     return cell;
 }
 
+
+// function selectorListener(){
+    
+//     let rows;
+//     let cols;
+//     let totalCells;
+    
+//     selector.addEventListener("change", function(){
+    
+        
+
+
+//         if (selectorValue == 1){
+//             console.log("hai scelto la modalita Facile");
+//             rows = 7;
+//             cols = 7;
+//         }else if(selectorValue == 2){
+//             console.log("hai scelto la modalita media");
+//             rows = 9;
+//             cols = 9;
+//         }else if(selectorValue == 3){
+//             console.log("hai scelto la modalita difficile");
+//             rows = 10;
+//             cols = 10;
+//         }else{
+//             console.log("hai scelto la modalita Estrema");
+//             rows = 30;
+//             cols = 30;
+//         }
+
+//         totalCells = rows * cols;
+
+//         console.log(rows);
+//         console.log(cols);
+//         console.log(totalCells);
+    
+//     })
+
+
+//     return rows;
+//     return cols;
+//     return totalCells;
+
+
+// }
+
 // svolgimento
+// selectorListener();
+// definiamo i vari casi in base alla difficolta del gioco
+console.log(selectorValue);
 
 // creiamo una variabile falsa di default
 let gridExist = false;
 
 
 button.addEventListener('click', function(){
+
+
 
     if (gridExist == false){
         for(let i = 0; i < totalCells; i++){

@@ -57,8 +57,13 @@ section{
     height: calc(100% / 10);
 }
 
+.cell.extreme{
+    width: calc(100% / 30);
+    height: calc(100% / 30);
+}
+
 .cell.clicked{
-    background-color: rgb(252, 118, 118);
+    background-color: rgb(71, 172, 255);
 }
 
 
