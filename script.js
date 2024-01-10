@@ -20,11 +20,14 @@ const totalCells = rows * cols;
 const createCell = () => {
     const cell = document.createElement('div');
     cell.className = 'cell';
+    cell.classList.add("d-flex", "justify-content-center", "align-items-center");
+
     return cell;
 }
 
 // svolgimento
 
+// creiamo una variabile falsa di default
 let gridExist = false;
 
 
@@ -32,19 +35,43 @@ button.addEventListener('click', function(){
 
     if (gridExist == false){
         for(let i = 0; i < totalCells; i++){
-        
-            const newCell = createCell();
+
+            // creiamo il contenitore per il numero
+            cellContainer = document.createElement('h5');
+
+
+            //inseriamo il numero dentro il contenitore
+            numInCell = i + 1;
+            cellContainer.textContent = numInCell;
+
+
+            // inseriamo il contenitore dentro la cella
+            newCell.appendChild(cellContainer);
+            
+
+            // inseriamo la cella dentro la griglia
+            const newCell = createCell();        
             grid.appendChild(newCell);
+
+
+            newCell.addEventListener('click', () => {
+                newCell.classList.add("clicked");
+                console.log(cellContainer);
+            })
+
+
+
         }
-        
+        // facciamo si che il bottone play generi una sola griglia
         gridExist = true;
-    
+
     }
 
 
 
-
 });
+
+
 
 
 
